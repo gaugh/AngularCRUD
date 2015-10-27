@@ -1,0 +1,46 @@
+﻿<table class="table">
+    <tr>
+        <td colspan="2">
+            <a href="#/UserListing.html" class="btn-link">User Listing</a><br /><br />
+            <section class="margin-bottom-20">
+                <h4>Select language for translation:</h4>
+                <select class="form-control" ng-change="translate(true)" ng-model="selectedLanguage">
+                    <option value="en">English</option>
+                    <option value="no">Norsk</option>
+                </select>
+            </section>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="control-label">{{translation.PUBLISHER_NAME}}</label>
+        </td>
+        <td>
+            <input type="hidden" class="form-control" name="id" ng-model="user.PublisherId" />
+            <input type="text" class="form-control" name="id" ng-model="user.PublisherName" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="control-label"> {{translation.ADDRESS}}</label>
+        </td>
+        <td>
+            <input type="text" class="form-control" name="id" ng-model="user.Address" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="control-label"> {{translation.ADDRESS2}}</label>
+        </td>
+        <td>
+            <input type="text" class="form-control" name="id" ng-model="user.Address2" />
+        </td>
+    </tr>
+    <tr>
+        <td>            
+        </td>
+        <td>
+            <input type="button" ng-click="AddEditUser(user)" class="btn-success" value="Submit" />
+        </td>
+    </tr>
+</table>

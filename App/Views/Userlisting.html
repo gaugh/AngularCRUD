@@ -1,0 +1,67 @@
+﻿<style>
+    /*style.css*/
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 400px; 
+    height: 300px
+}
+
+</style>
+<table class="table">
+    <tr>
+        <td class="h1">
+            User Listing
+        </td>
+        <td>
+            <a href="#/AddUser.html" class="btn-link">Add Users</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="h1">
+            <input type="text" class="form-control" ng-model="SearchText" ng-keyup="SearchUser(SearchText)" />
+        </td>
+        <td>            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table ng-table="tableParams" class="table" >
+                <tr ng-repeat="user in $data">
+                    <td title="'Name'" filter="{ firstName: 'text'}" sortable="'firstName'">
+                        {{user.firstName}}
+                    </td>
+                    <td title="'Age'" filter="{ lastName: 'text'}" sortable="'lastName'">
+                        {{user.lastName}}
+                    </td>
+                </tr>
+            </table>
+
+            <!--<table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Publisher ID
+                        </th>
+                        <th>
+                            Publisher Name
+                        </th>
+                        <th>
+                            Address
+                        </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>{{user.PublisherId}}</td>
+                        <td>{{user.PublisherName}}</td>
+                        <td>{{user.Address}}</td>
+                        <td><a href="#/AddUser.html?Id={{user.PublisherId}}">Edit</a></td>
+                        <td><a ng-click="RemoveUser(user.PublisherId)">Remove</a></td>
+                    </tr>
+                </tbody>
+            </table>-->
+        </td>
+    </tr>
+</table>
